@@ -10,3 +10,9 @@ export async function editSnippet(id: number, code: string) {
 	console.log(id, code);
    redirect(`/snippets/${id}`);
 }
+
+export async function deleteSnippet(id: number) {
+	await db.snippet.delete({ where: { id } });
+	console.log('deleted snippet:', id);
+	redirect('/snippets');
+}
