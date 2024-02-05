@@ -34,7 +34,7 @@ export default async function SnippetShowPage(props: SnippetShowPageProps) {
 						Edit
 					</Link>
 					<form action={deleteSnippetsAction}>
-						<div className='p-2 border rounded'>Delete</div>
+						<button className='p-2 border rounded'>Delete</button>
 					</form>
 				</div>
 			</div>

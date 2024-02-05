@@ -1,28 +1,15 @@
-import { db } from '@/db';
-import { redirect } from 'next/navigation'
+'use client';
+
+import * as actions from '@/actions';
+import { useFormState } from 'react-dom';
 
 export default function SnippetCreatePage() {
-
-	async function createSnippet(formData: FormData) {
-		//Server action
-		'use server';
-		//get the title and code from the form data
-		const title = formData.get('title') as string;
-		const code = formData.get('code') as string;
-		//create a new snippet in the database
-		const snippet = await db.snippet.create({
-			data: {
-				title,
-				code
-			},
-		});
-		console.log(snippet)
-		//redirect to root route
-		redirect('/')
-	}
+	const [formState, action] = useFormState(actions.createSnippet, {
+		message: '',
+	});
 
 	return (
-		<form action={createSnippet}>
+		<form action={action}>
 			<h3 className='font-bold m-3'>Create a Snippet</h3>
 			<div className='flex flex-col gap-4'>
 				<div className='flex gap-4'>
@@ -49,6 +36,8 @@ export default function SnippetCreatePage() {
 						id='code'
 					/>
 				</div>
+				 {formState.message ? <div className='my-2 p-2 bg-red-400 border rounded border-red-800 text-center'>{formState.message}</div> : null}
+				 {/* Code above checks if a formstate message exists, if it does then display error with message in it, if not then return null */}
 				<button
 					type='submit'
 					className='rounded p2 bg-blue-600'>
