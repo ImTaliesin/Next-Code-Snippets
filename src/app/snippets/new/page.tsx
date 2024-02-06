@@ -16,7 +16,7 @@ export default function SnippetCreatePage() {
 					<label
 						className='w-12 text-white'
 						htmlFor='title'>
-						Title:
+						Title: 
 					</label>
 					<input
 						name='title'

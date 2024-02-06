@@ -24,7 +24,7 @@ export default async function SnippetShowPage(props: SnippetShowPageProps) {
 
 	return (
 		<div>
-			<div className='flex m-4 justify-between items-center'>
+			<div className='flex pt-4 pb-2 justify-between items-center'>
 				<Link href={'/'}>
 					<h1 className='flex p-2 border rounded bg-teal-400'>Home</h1>
 				</Link>
@@ -41,7 +41,7 @@ export default async function SnippetShowPage(props: SnippetShowPageProps) {
 				</div>
 			</div>
 
-			<pre className='p-3 border rounder bg-teal-400'>
+			<pre className='p-3 border rounded bg-teal-400 whitespace-pre-wrap'>
 				<code>{snippet.code}</code>
 			</pre>
 		</div>
