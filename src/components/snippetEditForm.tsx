@@ -19,6 +19,7 @@ export default function SnippetEditForm({ snippet }: SnippetEditFormProps) {
    const editSnippetAction = actions.editSnippet.bind(null, snippet.id, code);
 	return (
 		<div>
+			<div className='flex justify-center pb-3 text-white'>Currently Editing: {snippet.title}</div>
 			<Editor
 				height='40vh'
 				theme='vs-dark'
@@ -28,7 +29,7 @@ export default function SnippetEditForm({ snippet }: SnippetEditFormProps) {
 				onChange={editorChangeHandler}
 			/>
          <form action={editSnippetAction}> 
-            <button type='submit' className='p-2 border rounded'>Save</button>
+            <button type='submit' className='p-2 border rounded bg-teal-400'>Save</button>
          </form>
 		</div>
 	);

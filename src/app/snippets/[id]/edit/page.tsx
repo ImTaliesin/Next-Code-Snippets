@@ -18,7 +18,7 @@ export default async function SnippetEditPage(props: SnippetEditPageProps) {
 		notFound();
 	}
 	return (
-		<div>
+		<div className='pt-8'>
 			<SnippetEditForm snippet={snippet} />
 		</div>
 	);

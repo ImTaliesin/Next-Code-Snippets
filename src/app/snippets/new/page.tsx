@@ -10,11 +10,11 @@ export default function SnippetCreatePage() {
 
 	return (
 		<form action={action}>
-			<h3 className='font-bold m-3'>Create a Snippet</h3>
+			<h3 className='font-bold pt-3 pb-3 text-white'>Create a Snippet</h3>
 			<div className='flex flex-col gap-4'>
 				<div className='flex gap-4'>
 					<label
-						className='w-12'
+						className='w-12 text-white'
 						htmlFor='title'>
 						Title:
 					</label>
@@ -26,13 +26,13 @@ export default function SnippetCreatePage() {
 				</div>
 				<div className='flex gap-4'>
 					<label
-						className='w-12'
+						className='w-12 text-white'
 						htmlFor='code'>
 						Code:
 					</label>
 					<textarea
 						name='code'
-						className='border roundeed p-2 w-full'
+						className='border roundeed p-2 w-full '
 						id='code'
 					/>
 				</div>
@@ -40,7 +40,7 @@ export default function SnippetCreatePage() {
 				 {/* Code above checks if a formstate message exists, if it does then display error with message in it, if not then return null */}
 				<button
 					type='submit'
-					className='rounded p2 bg-blue-600'>
+					className='rounded p2 bg-teal-400'>
 					Create
 				</button>
 			</div>

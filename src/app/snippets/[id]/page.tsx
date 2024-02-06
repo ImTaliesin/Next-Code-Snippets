@@ -26,22 +26,22 @@ export default async function SnippetShowPage(props: SnippetShowPageProps) {
 		<div>
 			<div className='flex m-4 justify-between items-center'>
 				<Link href={'/'}>
-					<h1 className='flex p-2 border rounded bg-zinc-500'>Home</h1>
+					<h1 className='flex p-2 border rounded bg-teal-400'>Home</h1>
 				</Link>
-				<h1 className='text-xl font-bold'>{snippet.title}</h1>
+				<h1 className='text-xl font-bold text-white'>{snippet.title}</h1>
 				<div className='flex gap-2'>
 					<Link
 						href={`/snippets/${snippet.id}/edit`}
-						className='p-2 border rounded bg-zinc-500'>
+						className='p-2 border rounded bg-teal-400'>
 						Edit
 					</Link>
 					<form action={deleteSnippetsAction}>
-						<button className='p-2 border rounded bg-zinc-500'>Delete</button>
+						<button className='p-2 border rounded bg-teal-400'>Delete</button>
 					</form>
 				</div>
 			</div>
 
-			<pre className='p-3 border rounder bg-zinc-500'>
+			<pre className='p-3 border rounder bg-teal-400'>
 				<code>{snippet.code}</code>
 			</pre>
 		</div>
