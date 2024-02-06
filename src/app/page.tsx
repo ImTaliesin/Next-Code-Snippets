@@ -1,8 +1,6 @@
 import { db } from '@/db';
 import Link from 'next/link';
 
-export const dynamic = 'force-dymamic';
-
 export default async function Home() {
 	const snippets = await db.snippet.findMany();
 
@@ -11,8 +9,8 @@ export default async function Home() {
 			<Link
 				key={snippet.id}
 				href={`/snippets/${snippet.id}`}
-				className='flex justify-between items-center p-2 border rounded'>
-				<div>{snippet.title}</div>
+				className='flex justify-between items-center p-2 border rounded bg-gray-500'>
+				<div className=''>{snippet.title}</div>
 				<div>view</div>
 			</Link>
 		);
@@ -20,9 +18,11 @@ export default async function Home() {
 
 	return (
 		<div>
-			<div className='flex justify-between items-center'>
+			<div className='flex justify-between items-center pb-3'>
 				<h1 className='text-xl font-bold'>Snippets</h1>
-				<Link className='p-2 rounded'href='/snippets/new'>
+				<Link
+					className='p-2 rounded'
+					href='/snippets/new'>
 					Create a Snippet
 				</Link>
 			</div>

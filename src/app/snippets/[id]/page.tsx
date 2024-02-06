@@ -2,6 +2,7 @@ import { db } from '@/db';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import * as actions from '@/actions';
+import { Snippet } from '@prisma/client';
 
 interface SnippetShowPageProps {
 	params: {
@@ -9,7 +10,6 @@ interface SnippetShowPageProps {
 	};
 }
 export default async function SnippetShowPage(props: SnippetShowPageProps) {
-	await new Promise<void>(r => setTimeout(r, 100));
 	const snippet = await db.snippet.findFirst({
 		where: {
 			id: parseInt(props.params.id),
@@ -21,27 +21,38 @@ export default async function SnippetShowPage(props: SnippetShowPageProps) {
 	}
 
 	const deleteSnippetsAction = actions.deleteSnippet.bind(null, snippet.id);
-	
+
 	return (
 		<div>
 			<div className='flex m-4 justify-between items-center'>
+				<Link href={'/'}>
+					<h1 className='flex p-2 border rounded bg-zinc-500'>Home</h1>
+				</Link>
 				<h1 className='text-xl font-bold'>{snippet.title}</h1>
-
 				<div className='flex gap-2'>
 					<Link
 						href={`/snippets/${snippet.id}/edit`}
-						className='p-2 border rounded'>
+						className='p-2 border rounded bg-zinc-500'>
 						Edit
 					</Link>
 					<form action={deleteSnippetsAction}>
-						<button className='p-2 border rounded'>Delete</button>
+						<button className='p-2 border rounded bg-zinc-500'>Delete</button>
 					</form>
 				</div>
 			</div>
 
-			<pre className='p-3 border rounder bg-gray-200'>
+			<pre className='p-3 border rounder bg-zinc-500'>
 				<code>{snippet.code}</code>
 			</pre>
 		</div>
 	);
+}
+
+export async function generateStaticParams() {
+	const snippets = await db.snippet.findMany();
+	return snippets.map((snippet: Snippet) => {
+		return {
+			id: snippet.id.toString(),
+		};
+	});
 }
