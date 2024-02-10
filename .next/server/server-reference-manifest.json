@@ -1,0 +1,36 @@
+{
+  "node": {
+    "06248565854ff0eb13ed9eabe68df4db5e6ec49e": {
+      "workers": {
+        "app/snippets/[id]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Ctalie%5C%5CDocuments%5C%5CGitHub%5C%5CNextJSWebTest2%5C%5Csrc%5C%5Cactions%5C%5Cindex.ts%22%2C%5B%22createSnippet%22%2C%22editSnippet%22%2C%22deleteSnippet%22%5D%5D%5D&__client_imported__=!",
+        "app/snippets/new/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Ctalie%5C%5CDocuments%5C%5CGitHub%5C%5CNextJSWebTest2%5C%5Csrc%5C%5Cactions%5C%5Cindex.ts%22%2C%5B%22createSnippet%22%2C%22editSnippet%22%2C%22deleteSnippet%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/snippets/[id]/page": "rsc",
+        "app/snippets/new/page": "action-browser"
+      }
+    },
+    "226aaf89b58f8cfc0619dc8a5dda7dfcdff35b04": {
+      "workers": {
+        "app/snippets/[id]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Ctalie%5C%5CDocuments%5C%5CGitHub%5C%5CNextJSWebTest2%5C%5Csrc%5C%5Cactions%5C%5Cindex.ts%22%2C%5B%22createSnippet%22%2C%22editSnippet%22%2C%22deleteSnippet%22%5D%5D%5D&__client_imported__=!",
+        "app/snippets/new/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Ctalie%5C%5CDocuments%5C%5CGitHub%5C%5CNextJSWebTest2%5C%5Csrc%5C%5Cactions%5C%5Cindex.ts%22%2C%5B%22createSnippet%22%2C%22editSnippet%22%2C%22deleteSnippet%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/snippets/[id]/page": "rsc",
+        "app/snippets/new/page": "action-browser"
+      }
+    },
+    "fe038ff0b05d796d5d552dc763ef88740010208f": {
+      "workers": {
+        "app/snippets/[id]/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Ctalie%5C%5CDocuments%5C%5CGitHub%5C%5CNextJSWebTest2%5C%5Csrc%5C%5Cactions%5C%5Cindex.ts%22%2C%5B%22createSnippet%22%2C%22editSnippet%22%2C%22deleteSnippet%22%5D%5D%5D&__client_imported__=!",
+        "app/snippets/new/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Ctalie%5C%5CDocuments%5C%5CGitHub%5C%5CNextJSWebTest2%5C%5Csrc%5C%5Cactions%5C%5Cindex.ts%22%2C%5B%22createSnippet%22%2C%22editSnippet%22%2C%22deleteSnippet%22%5D%5D%5D&__client_imported__=true!"
+      },
+      "layer": {
+        "app/snippets/[id]/page": "rsc",
+        "app/snippets/new/page": "action-browser"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "NETmL3HZI+GOJC0HbVyt3lM/TvA2Bhzp8pobNcoo8j0="
+}
